@@ -14,14 +14,23 @@
                 <div class="form-floating mb-3">
                     {{ form_widget(registrationForm.email) }}
                     {{ form_label(registrationForm.email) }}
+                    <div class="invalid-feedback">
+                        {{ form_errors(registrationForm.email) }}
+                    </div>
                 </div>
                 <div class="form-floating mb-3">
                     {{ form_widget(registrationForm.plainPassword.password) }}
                     {{ form_label(registrationForm.plainPassword.password) }}
+                    <div class="invalid-feedback">
+                        {{ form_errors(registrationForm.plainPassword.password) }}
+                    </div>
                 </div>
                 <div class="form-floating mb-3">
                     {{ form_widget(registrationForm.plainPassword.confirm_password) }}
                     {{ form_label(registrationForm.plainPassword.confirm_password) }}
+                    <div class="invalid-feedback">
+                        {{ form_errors(registrationForm.plainPassword.confirm_password) }}
+                    </div>
                 </div>
                 {{ form_widget(registrationForm.submit) }}
             </div>
