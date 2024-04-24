@@ -26,12 +26,15 @@ class RegistrationFormType extends AbstractType
                     ]),
                     new Email()
                 ],
+                'attr' => ['placeholder' => 'Email'],
                 'required' => false
             ])
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
-                'first_options' => ['label' => 'Password'],
-                'second_options' => ['label' => 'Repeat Password'],
+                'first_options' => ['label' => 'Password', 'attr' => ['placeholder' => 'Password']],
+                'second_options' => ['label' => 'Repeat Password', 'attr' => ['placeholder' => 'Repeat Password']],
+                'first_name' => 'password',
+                'second_name' => 'confirm_password',
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',
