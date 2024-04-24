@@ -7,15 +7,23 @@
         {% for flash_error in app.flashes('verify_email_error') %}
             <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
         {% endfor %}
-
         <h1>Register</h1>
-
         {{ form_errors(registrationForm) }}
-
-        {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword) }}
-
+        {{ form_start(registrationForm, { 'attr': { 'class': 'row justify-content-center' }  }) }}
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    {{ form_widget(registrationForm.email) }}
+                    {{ form_label(registrationForm.email) }}
+                </div>
+                <div class="form-floating mb-3">
+                    {{ form_widget(registrationForm.plainPassword.password) }}
+                    {{ form_label(registrationForm.plainPassword.password) }}
+                </div>
+                <div class="form-floating mb-3">
+                    {{ form_widget(registrationForm.plainPassword.confirm_password) }}
+                    {{ form_label(registrationForm.plainPassword.confirm_password) }}
+                </div>
+            </div>
         {{ form_end(registrationForm) }}
     </div>
 {% endblock %}
