@@ -22,22 +22,23 @@ class RegistrationFormType extends AbstractType
             ->add('email', TextType::class, [
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter an email',
+                        'message' => 'validators.not_blank',
                     ]),
                     new Email()
                 ],
-                'attr' => ['placeholder' => 'Email'],
+                'attr' => ['placeholder' => 'user.email'],
+                'label' => 'user.email',
                 'required' => false
             ])
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
-                'first_options' => ['label' => 'Password', 'attr' => ['placeholder' => 'Password']],
-                'second_options' => ['label' => 'Repeat Password', 'attr' => ['placeholder' => 'Repeat Password']],
+                'first_options' => ['label' => 'user.password', 'attr' => ['placeholder' => 'user.password']],
+                'second_options' => ['label' => 'user.password_confirmation', 'attr' => ['placeholder' => 'user.password_confirmation']],
                 'first_name' => 'password',
                 'second_name' => 'confirm_password',
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'validators.not_blank',
                     ]),
                     new Length([
                         'min' => 6,
@@ -58,6 +59,7 @@ class RegistrationFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => User::class,
+
         ]);
     }
 }
