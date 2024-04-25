@@ -18,8 +18,8 @@ security:
             user_checker: App\Security\UserChecker
             provider: app_user_provider
             form_login:
-                login_path: app_login
-                check_path: app_login
+                login_path: login
+                check_path: login
                 enable_csrf: true
             logout:
                 path: app_logout

@@ -1,0 +1,8 @@
+title:
+  register: "S'inscrire"
+user:
+  email: "E-mail"
+  password: "Mot de passe"
+  password_confirmation: "Confirmation du mot de passe"
+validators:
+    not_blank: "Ce champ ne doit pas être vide."
