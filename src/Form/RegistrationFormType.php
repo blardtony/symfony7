@@ -21,9 +21,7 @@ class RegistrationFormType extends AbstractType
         $builder
             ->add('email', TextType::class, [
                 'constraints' => [
-                    new NotBlank([
-                        'message' => 'validators.not_blank',
-                    ]),
+                    new NotBlank(),
                     new Email()
                 ],
                 'attr' => ['placeholder' => 'user.email'],
@@ -37,12 +35,9 @@ class RegistrationFormType extends AbstractType
                 'first_name' => 'password',
                 'second_name' => 'confirm_password',
                 'constraints' => [
-                    new NotBlank([
-                        'message' => 'validators.not_blank',
-                    ]),
+                    new NotBlank(),
                     new Length([
                         'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
                         'max' => 4096,
                     ]),
                 ],
