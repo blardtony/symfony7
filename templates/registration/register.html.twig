@@ -26,9 +26,8 @@
                     {{ form_widget(registrationForm.plainPassword.confirm_password) }}
                     {{ form_label(registrationForm.plainPassword.confirm_password) }}
                     {{ form_errors(registrationForm.plainPassword.confirm_password)}}
-
                 </div>
-                {{ form_widget(registrationForm.submit) }}
+                {{ include('components/button/button.html.twig', {text: 'button.register', type: 'submit', color: 'primary', size: 'btn-lg'}) }}
             </div>
         {{ form_end(registrationForm) }}
     </div>
