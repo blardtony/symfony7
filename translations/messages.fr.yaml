@@ -16,3 +16,5 @@ login:
     submit: "Se connecter"
     no_account: "Pas encore de compte ?"
     go_to_register: "Créez-en un ici."
+navbar:
+  home: "Accueil"
