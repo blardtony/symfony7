@@ -28,6 +28,10 @@
                     {{ form_errors(registrationForm.plainPassword.confirm_password)}}
                 </div>
                 {{ include('components/button/button.html.twig', {text: 'register.submit', type: 'submit', color: 'primary', size: 'btn-lg'}) }}
+                <div class="mt-3">
+                    {{ 'register.have_account' | trans }}
+                    {{ include('components/link/simple-link.html.twig', { text: 'register.go_to_login', url: 'login' }) }}
+                </div>
             </div>
         {{ form_end(registrationForm) }}
     </div>
