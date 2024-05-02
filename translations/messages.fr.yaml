@@ -9,6 +9,10 @@ validators:
 register:
   title: "S'inscrire"
   submit: "S'inscrire"
+  have_account: "Déjà un compte ?"
+  go_to_login: "Connectez-vous ici."
 login:
     title: "Se connecter"
     submit: "Se connecter"
+    no_account: "Pas encore de compte ?"
+    go_to_register: "Créez-en un ici."
