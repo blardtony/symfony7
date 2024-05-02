@@ -10,7 +10,7 @@
                 {% for flash_error in app.flashes('verify_email_error') %}
                     <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
                 {% endfor %}
-                <h1 class="mb-3">{{ 'title.register' | trans }}</h1>
+                <h1 class="mb-3">{{ 'register.title' | trans }}</h1>
                 <div class="form-floating mb-3">
                     {{ form_widget(registrationForm.email) }}
                     {{ form_label(registrationForm.email) }}
@@ -26,9 +26,8 @@
                     {{ form_widget(registrationForm.plainPassword.confirm_password) }}
                     {{ form_label(registrationForm.plainPassword.confirm_password) }}
                     {{ form_errors(registrationForm.plainPassword.confirm_password)}}
-
                 </div>
-                {{ form_widget(registrationForm.submit) }}
+                {{ include('components/button/button.html.twig', {text: 'register.submit', type: 'submit', color: 'primary', size: 'btn-lg'}) }}
             </div>
         {{ form_end(registrationForm) }}
     </div>

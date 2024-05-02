@@ -1,9 +1,14 @@
-title:
-  register: "S'inscrire"
-  login : "Se connecter"
+button:
+  send: "Envoyer"
 user:
   email: "E-mail"
   password: "Mot de passe"
   password_confirmation: "Confirmation du mot de passe"
 validators:
     not_blank: "Ce champ ne doit pas être vide."
+register:
+  title: "S'inscrire"
+  submit: "S'inscrire"
+login:
+    title: "Se connecter"
+    submit: "Se connecter"

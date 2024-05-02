@@ -1,0 +1,19 @@
+{% if size is not defined %}
+    {% set size = '' %}
+{% endif %}
+
+{% if color is not defined %}
+    {% set color = 'primary' %}
+{% endif %}
+
+{% if type is not defined %}
+    {% set type = 'button' %}
+{% endif %}
+
+{% if text is not defined %}
+    {% set title = 'button.send' %}
+{% endif %}
+
+<button class="btn {{ size }} btn-{{ color }}" type="{{ type }}">
+    {{ text | trans }}
+</button>

@@ -29,10 +29,6 @@ class RegistrationFormType extends AbstractType
                 'second_name' => 'confirm_password',
                 'required' => false
             ])
-            ->add('submit', SubmitType::class, [
-                'label' => 'Register',
-                'attr' => ['class' => 'btn btn-primary btn-lg']
-            ])
         ;
     }
 
