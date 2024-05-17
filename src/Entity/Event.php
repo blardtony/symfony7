@@ -30,6 +30,10 @@ class Event
     #[ORM\JoinColumn(nullable: false)]
     private ?User $createdBy = null;
 
+    #[ORM\ManyToOne(inversedBy: 'events')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?EventType $type = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -91,6 +95,18 @@ class Event
     public function setCreatedBy(?User $createdBy): static
     {
         $this->createdBy = $createdBy;
+
+        return $this;
+    }
+
+    public function getType(): ?EventType
+    {
+        return $this->type;
+    }
+
+    public function setType(?EventType $type): static
+    {
+        $this->type = $type;
 
         return $this;
     }
