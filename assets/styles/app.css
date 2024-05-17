@@ -13,3 +13,7 @@ body {
     font-size: var(--font-size);
     background-color: var(--background-color);
 }
+
+.logo {
+    height: 75px;
+}
