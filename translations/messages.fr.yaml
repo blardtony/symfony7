@@ -20,3 +20,5 @@ logout:
   title: 'Se déconnecter'
 navbar:
   home: "Accueil"
+event_type:
+  title: "Types d'événement"
