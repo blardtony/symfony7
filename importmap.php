@@ -25,14 +25,22 @@ return [
     '@hotwired/turbo' => [
         'version' => '8.0.4',
     ],
-    'bootstrap' => [
-        'version' => '5.3.3',
+    '@tailwindcss/forms' => [
+        'version' => '0.5.7',
     ],
-    '@popperjs/core' => [
-        'version' => '2.11.8',
+    'mini-svg-data-uri' => [
+        'version' => '1.4.4',
     ],
-    'bootstrap/dist/css/bootstrap.min.css' => [
-        'version' => '5.3.3',
-        'type' => 'css',
+    'tailwindcss/plugin' => [
+        'version' => '3.3.5',
+    ],
+    'tailwindcss/defaultTheme' => [
+        'version' => '3.3.5',
+    ],
+    'tailwindcss/colors' => [
+        'version' => '3.3.5',
+    ],
+    'picocolors' => [
+        'version' => '1.0.0',
     ],
 ];
