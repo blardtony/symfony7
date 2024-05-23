@@ -24,5 +24,23 @@ return [
     ],
     '@hotwired/turbo' => [
         'version' => '8.0.4',
-    ]
+    ],
+    '@tailwindcss/forms' => [
+        'version' => '0.5.7',
+    ],
+    'mini-svg-data-uri' => [
+        'version' => '1.4.4',
+    ],
+    'tailwindcss/plugin' => [
+        'version' => '3.3.5',
+    ],
+    'tailwindcss/defaultTheme' => [
+        'version' => '3.3.5',
+    ],
+    'tailwindcss/colors' => [
+        'version' => '3.3.5',
+    ],
+    'picocolors' => [
+        'version' => '1.0.0',
+    ],
 ];
