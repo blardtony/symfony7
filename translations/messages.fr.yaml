@@ -11,6 +11,7 @@ register:
   submit: "S'inscrire"
   have_account: "Déjà un compte ?"
   go_to_login: "Connectez-vous ici."
+  mail_send: "Un e-mail de confirmation a été envoyé à l'adresse suivante : %email%."
 login:
     title: "Se connecter"
     submit: "Se connecter"
