@@ -7,7 +7,6 @@
         <form method="post" class="flex justify-center">
             <div>
                 <h1 class="text-5xl font-bold mb-5">{{ "login.title" | trans }}</h1>
-
                 {% if error %}
                     {{ include('components/alert/_danger.html.twig', {title: error.messageKey|trans(error.messageData, 'security')} ) }}
                 {% endif %}
