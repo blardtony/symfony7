@@ -14,13 +14,19 @@
                     {{ include('components/alert/_danger.html.twig', {title: flash_error} ) }}
                 {% endfor %}
                 <div class="mb-3">
-                    {{ form_row(registrationForm.email) }}
+                    {{ form_label(registrationForm.email) }}
+                    {{ form_widget(registrationForm.email) }}
+                    {{ form_errors(registrationForm.email) }}
                 </div>
                 <div class="form-floating mb-3">
-                    {{ form_row(registrationForm.plainPassword.password) }}
+                    {{ form_label(registrationForm.plainPassword.password) }}
+                    {{ form_widget(registrationForm.plainPassword.password) }}
+                    {{ form_errors(registrationForm.plainPassword.password) }}
                 </div>
                 <div class="form-floating mb-3">
-                    {{ form_row(registrationForm.plainPassword.confirm_password) }}
+                    {{ form_label(registrationForm.plainPassword.confirm_password) }}
+                    {{ form_widget(registrationForm.plainPassword.confirm_password) }}
+                    {{ form_errors(registrationForm.plainPassword.confirm_password) }}
                 </div>
                 {{ include('components/button/_submit.html.twig', {label: 'register.submit'}) }}
                 <div class="mt-3">
