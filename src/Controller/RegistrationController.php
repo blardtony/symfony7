@@ -16,7 +16,7 @@ use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
 class RegistrationController extends AbstractController
 {
-    public function __construct(private readonly EmailVerifier $emailVerifier, private readonly RegisterService $registerService)
+    public function __construct(private readonly EmailVerifier $emailVerifier, private readonly RegisterService $registerService, private readonly TranslatorInterface $translator)
     {
     }
 
@@ -31,7 +31,7 @@ class RegistrationController extends AbstractController
 
             $this->registerService->register($user);
             $this->registerService->sendVerificationMail($user);
-
+            $this->addFlash('success', $this->translator->trans('register.mail_send', ['%email%' => $user->getEmail()]));
             return $this->redirectToRoute('homepage');
         }
 
